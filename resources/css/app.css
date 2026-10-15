@@ -66,3 +66,37 @@ a { color: var(--button); }
 .success { margin: 0; color: var(--button); font-weight: 500; }
 .btn-outline { height: 46px; padding: 0 24px; border: 2px solid var(--button); border-radius: 8px; background: transparent; color: var(--button); font-size: 15px; font-weight: 700; cursor: pointer; }
 .link-button { border: 0; background: none; color: var(--button); font-size: 14px; cursor: pointer; text-decoration: underline; }
+/* ---------- App layout (logged-in pages) ---------- */
+.app { display: flex; min-height: 100vh; }
+
+.sidebar { width: 240px; flex: none; box-sizing: border-box; padding: 32px 24px; background: var(--dark); display: flex; flex-direction: column; gap: 32px; }
+.nav { display: flex; flex-direction: column; gap: 8px; }
+.nav a { padding: 12px 14px; border-radius: 8px; color: var(--muted); text-decoration: none; }
+.nav a:hover { background: #003c3a; }
+.nav a.active { background: var(--button); color: var(--button-text); font-weight: 700; }
+
+.sidebar-user { margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--muted); }
+.sidebar-user strong { color: var(--text); font-size: 15px; }
+.sidebar-user form { margin: 8px 0 0; }
+.sidebar-user .link-button { padding: 0; }
+
+.content { flex: 1; min-width: 0; box-sizing: border-box; padding: 48px; display: flex; flex-direction: column; gap: 24px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.page-header h1 { font-size: 38px; }
+
+.search { display: flex; gap: 12px; }
+.search input { flex: 1; min-width: 0; height: 48px; padding: 0 16px; border: 2px solid var(--border); border-radius: 10px; font-size: 16px; background: #00302f; color: var(--text); }
+.join-box { display: flex; flex-direction: column; gap: 8px; }
+.join-box .hint { margin: 0; }
+
+.empty { padding: 48px 24px; text-align: center; border: 2px dashed var(--border); border-radius: 12px; color: var(--muted); }
+.empty p { margin: 0 0 6px; }
+
+a.btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.btn-small { height: 44px; padding: 0 20px; font-size: 15px; }
+
+@media (max-width: 800px) {
+    .app { flex-direction: column; }
+    .sidebar { width: 100%; padding: 16px 24px; gap: 16px; }
+    .content { padding: 24px; }
+}

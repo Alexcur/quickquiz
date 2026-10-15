@@ -1,17 +1,20 @@
-@extends('layouts.guest')
+@extends('layouts.app')
 
-@section('title', 'Teacher dashboard - Quickquiz')
+@section('title', 'My quizzes - Quickquiz')
 
 @section('content')
-<div class="auth-form" style="min-height: 100vh;">
-    <div>
-        <h2>Teacher dashboard</h2>
-        <p class="hint">Hello, {{ auth()->user()->name }}. Your quizzes will appear here.</p>
+<div class="page-header">
+    <h1>My quizzes</h1>
+    <a href="#" class="btn btn-small">+ New quiz</a>
+</div>
 
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-            <button class="btn" type="submit">Log out</button>
-        </form>
-    </div>
+<form class="search" role="search">
+    <input type="search" name="q" placeholder="Search by title or quiz number" aria-label="Search quizzes">
+    <button class="btn btn-small" type="submit">Search</button>
+</form>
+
+<div class="empty">
+    <p>You have no quizzes yet.</p>
+    <p class="hint">The quizzes you create will appear here.</p>
 </div>
 @endsection
