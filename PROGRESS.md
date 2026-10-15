@@ -4,3 +4,4 @@
 - Step 2 design: done (10 screens)
 - Step 3 setup: done (Laravel 12, MySQL, GitHub)
 - Step 4 database: next (migrations and models)
+- Step 5 authentication: done (register, login, email confirmation, roles, layout)
